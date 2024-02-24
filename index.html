@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    <h1><center>Tabuada</center></h1>
+    Escreva o numero da tabuada desejada:<br>
+    <input type="number" id="tabuada" name="tabuada" min="0">
+    <button onclick="tabuada()">Mostrar</button> 
+    <script>
+        function tabuada(){
+            if (document.getElementById('tabuada').value != "" & Math.sign(document.getElementById('tabuada').value) == 1){
+                var tab = parseInt(document.getElementById('tabuada').value);
+                for(var count=1; count<=10; count++){
+                    document.write(tab + " x " + count + " = " + tab * count + "<br>")
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="tabuada.css">
+</body>
+</html>
